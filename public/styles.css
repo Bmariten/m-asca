@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+@keyframes bounce-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+.animate-bounce-right {
+  animation: bounce-right 1.5s infinite;
+}
+/* Custom CSS */
+body {
+  padding-top: 4rem; /* Adjust this value to match the navbar height */
+}
+
+.navbar {
+  height: 4rem; /* Set a fixed height for the navbar */
+}

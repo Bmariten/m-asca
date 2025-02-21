@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M-ASCA - Loans Details</title>
+  <link href="/output.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white/80 backdrop-blur-md shadow-lg fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-green-600 hover:text-green-700 transition-all">M-ASCA</a>
+      <div class="flex space-x-6">
+        <a href="/" class="text-gray-700 hover:text-green-600 transition-all">Home</a>
+        <a href="/m-asca-model" class="text-gray-700 hover:text-green-600 transition-all">M-ASCA Model</a>
+        <a href="/about" class="text-gray-700 hover:text-green-600 transition-all">About Us</a>
+        <a href="/terms-and-policies" class="text-gray-700 hover:text-green-600 transition-all">Terms and Policies</a>
+        <a href="/products" class="text-gray-700 hover:text-green-600 transition-all">Products</a>
+        <a href="/downloads" class="text-gray-700 hover:text-green-600 transition-all">Downloads</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="container mx-auto mt-24 mb-16 px-6">
+    <div class="text-center">
+      <h1 class="text-3xl md:text-4xl font-bold text-green-600 mb-4">Loans Details</h1>
+      <p class="text-gray-700 text-base md:text-lg">Explore our loan options and use our calculators to plan your finances.</p>
+    </div>
+  </section>
+
+  <!-- Loans Content -->
+  <section class="container mx-auto my-12 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Ordinary Loan Card -->
+      <div class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 flex flex-col items-center hover:bg-teal-200 transition-all">
+        <i class="fa-solid fa-wallet text-3xl text-green-600 mb-4"></i>
+        <h3 class="text-lg font-semibold text-green-600 mb-2">Ordinary Loan</h3>
+        <p class="text-gray-700 text-sm text-center">Borrow up to 3x your savings at 1% interest with guarantors. Maximum repayment period: 36 months.</p>
+      </div>
+
+      <!-- Temporary Loan Card -->
+      <div class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 flex flex-col items-center hover:bg-teal-200 transition-all">
+        <i class="fa-solid fa-clock text-3xl text-green-600 mb-4"></i>
+        <h3 class="text-lg font-semibold text-green-600 mb-2">Temporary Loan</h3>
+        <p class="text-gray-700 text-sm text-center">Borrow up to 2/3 of your savings at 1% interest. Maximum repayment period: 12 months.</p>
+      </div>
+
+      <!-- Instant Loan Card -->
+      <div class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 flex flex-col items-center hover:bg-teal-200 transition-all">
+        <i class="fa-solid fa-bolt text-3xl text-green-600 mb-4"></i>
+        <h3 class="text-lg font-semibold text-green-600 mb-2">Instant Loan</h3>
+        <p class="text-gray-700 text-sm text-center">Borrow up to half your savings or Ksh 10,000 (whichever is lower) at 5% monthly interest. Repayment period: 1 month.</p>
+      </div>
+
+      <!-- Chama Loan Card -->
+      <div class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 flex flex-col items-center hover:bg-teal-200 transition-all">
+        <i class="fa-solid fa-users text-3xl text-green-600 mb-4"></i>
+        <h3 class="text-lg font-semibold text-green-600 mb-2">Chama Loan</h3>
+        <p class="text-gray-700 text-sm text-center">Borrow up to 3x your savings at 2.5% interest. Maximum repayment period: 2 years.</p>
+      </div>
+
+      <!-- Group Loan Card -->
+      <div class="bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 flex flex-col items-center hover:bg-teal-200 transition-all">
+        <i class="fa-solid fa-users-gear text-3xl text-green-600 mb-4"></i>
+        <h3 class="text-lg font-semibold text-green-600 mb-2">Group Loan</h3>
+        <p class="text-gray-700 text-sm text-center">Borrow up to 3x your savings at 2.5% interest. Maximum repayment period: 2 years.</p>
+      </div>
+    </div>
+
+   <!-- Loan and Dividend Calculators Section -->
+<h2 class="text-2xl font-bold text-green-600 mt-12 mb-6 text-center">Calculators</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <!-- Loan Calculator -->
+  <div class="bg-teal-50 backdrop-blur-md rounded-xl shadow-lg p-8">
+    <h3 class="text-xl font-semibold text-green-600 mb-6 text-center">Loan Calculator</h3>
+    <form id="loanCalculatorForm" class="space-y-4">
+      <div>
+        <label for="loanType" class="block text-sm font-medium text-gray-700">Select Loan Type</label>
+        <select id="loanType" class="mt-1 block w-full rounded-lg border-teal-300 shadow-sm bg-teal-50 focus:ring-teal-500 focus:border-teal-500" required>
+          <option value="ordinary">Ordinary Loan</option>
+          <option value="temporary">Temporary Loan</option>
+          <option value="instant">Instant Loan</option>
+          <option value="chama">Chama Loan</option>
+          <option value="group">Group Loan</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="interestRate" class="block text-sm font-medium text-gray-700">Interest Rate (%)</label>
+        <input type="number" id="interestRate" class="mt-1 block w-full rounded-lg border-teal-300 shadow-sm bg-teal-50 focus:ring-teal-500 focus:border-teal-500" readonly required>
+      </div>
+
+      <div>
+        <label for="loanAmount" class="block text-sm font-medium text-gray-700">Loan Amount (Ksh)</label>
+        <input type="number" id="loanAmount" class="mt-1 block w-full rounded-lg border-teal-300 shadow-sm bg-teal-50 focus:ring-teal-500 focus:border-teal-500" required>
+      </div>
+
+      <div>
+        <label for="loanDuration" class="block text-sm font-medium text-gray-700">Loan Duration (Months)</label>
+        <input type="number" id="loanDuration" class="mt-1 block w-full rounded-lg border-teal-300 shadow-sm bg-teal-50 focus:ring-teal-500 focus:border-teal-500" required>
+      </div>
+
+      <div class="flex items-center justify-between">
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">Calculate</button>
+        <div id="loanResult" class="text-green-600 font-bold ml-4"></div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Dividend Calculator -->
+  <div class="bg-teal-50 backdrop-blur-md rounded-xl shadow-lg p-8">
+    <h3 class="text-xl font-semibold text-green-600 mb-6 text-center">Dividend Calculator</h3>
+    <form id="dividendCalculatorForm" class="space-y-4">
+      <div>
+        <label for="savingsAmount" class="block text-sm font-medium text-gray-700">Savings Amount (Ksh)</label>
+        <input type="number" id="savingsAmount" class="mt-1 block w-full rounded-lg border-teal-300 shadow-sm bg-teal-50 focus:ring-teal-500 focus:border-teal-500" required>
+      </div>
+      <div>
+        <label for="dividendRate" class="block text-sm font-medium text-gray-700">Dividend Rate (%)</label>
+        <input type="number" id="dividendRate" class="mt-1 block w-full rounded-lg border-teal-300 shadow-sm bg-teal-50 focus:ring-teal-500 focus:border-teal-500" required>
+      </div>
+      <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-all">Calculate</button>
+    </form>
+    <div id="dividendResult" class="mt-4 text-green-600 font-bold"></div>
+  </div>
+</div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 M-ASCA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Loan Type and Interest Rate Mapping
+    const loanTypes = {
+      ordinary: 1,
+      temporary: 1,
+      instant: 5,
+      chama: 2.5,
+      group: 2.5
+    };
+  
+    // Set the default interest rate when the page loads
+    document.getElementById('interestRate').value = loanTypes.ordinary;
+  
+    // Update interest rate when loan type changes
+    document.getElementById('loanType').addEventListener('change', function() {
+      const loanType = this.value;
+      document.getElementById('interestRate').value = loanTypes[loanType];
+    });
+  
+    // Loan Calculator Logic
+    document.getElementById('loanCalculatorForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Get user input values
+      const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+      const interestRate = parseFloat(document.getElementById('interestRate').value);
+      const loanDuration = parseFloat(document.getElementById('loanDuration').value);
+  
+      // Calculate interest and total repayment
+      const monthlyInterestRate = interestRate / 100;
+      const totalInterest = loanAmount * monthlyInterestRate * loanDuration;
+      const totalRepayment = loanAmount + totalInterest;
+  
+      // Display the result in a single line next to the Calculate button
+      document.getElementById('loanResult').innerHTML = `Total Repayment: Ksh ${totalRepayment.toFixed(2)} (Interest: Ksh ${totalInterest.toFixed(2)})`;
+    });
+
+    // Handling Dividend Calculator Logic
+  document.getElementById("dividendCalculatorForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get input values
+    const savingsAmount = parseFloat(document.getElementById("savingsAmount").value);
+    const dividendRate = parseFloat(document.getElementById("dividendRate").value);
+
+    // Check if the inputs are valid
+    if (isNaN(savingsAmount) || isNaN(dividendRate) || savingsAmount <= 0 || dividendRate <= 0) {
+      alert("Please enter valid values for both fields.");
+      return;
+    }
+
+    // Calculate the dividend
+    const dividendAmount = (savingsAmount * dividendRate) / 100;
+
+    // Display result
+    document.getElementById("dividendResult").textContent = `Your dividend is: Ksh ${dividendAmount.toFixed(2)}`;
+  });
+  </script>
+</body>
+
+</html>
